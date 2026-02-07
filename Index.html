@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💖</title>
+<style>
+body {
+background: #ffe6f0;
+font-family: 'Comic Sans MS', cursive;
+text-align: center;
+padding-top: 80px;
+}
+
+h1 {
+color: #ff4d88;
+}
+
+.btn {
+padding: 15px 35px;
+font-size: 20px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+position: relative;
+}
+
+#yes {
+background-color: #ff4d88;
+color: white;
+font-size: 24px;
+}
+
+#no {
+background-color: #ffcce0;
+color: #ff4d88;
+margin-left: 20px;
+position: absolute;
+}
+</style>
+</head>
+<body>
+
+<h1>Will you be my Valentine? 💌</h1>
+
+<button class="btn" id="yes" onclick="yesClicked()">YES 💖</button>
+<button class="btn" id="no" onmouseover="moveNo()">NO 🙄</button>
+
+<script>
+function moveNo() {
+const x = Math.random() * (window.innerWidth - 100);
+const y = Math.random() * (window.innerHeight - 100);
+document.getElementById("no").style.left = x + "px";
+document.getElementById("no").style.top = y + "px";
+}
+
+function yesClicked() {
+document.body.innerHTML = `
+<h1>YAYYY!! 💕🥰</h1>
+<p>You just made me the happiest person 💖</p>
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2Zpb2ZqbWx5YWhjNnVqaGx6bmlsZ2c0bDczb2Z1em84NHh2Y3VnbiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xUPGcguWZHRC2HyBRS/giphy.gif" width="300">
+`;
+}
+</script>
+
+</body>
+</html>
